@@ -2,10 +2,35 @@
 
 {% block body %}
 
-    <div class="col">
+    <div class="col-md-6 col-md-offset-2 border border-primary bg-light">
+      <h1 class="text-center">Check Similarities</h1>
         <form action="/compare" enctype="multipart/form-data" method="post">
 
             <!-- TODO -->
+            <div class="row form-group">
+              <div class="col-6">
+                <input class="form-control" type="file" name="file1" value="" placeholder="choose 1st file" required>
+              </div>
+
+              <div class="col-6">
+                <input class="form-control" type="file" name="file2" value="" placeholder="choose 2nd file" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control" name="algorithm" required>
+                <option selected disabled>Choose Algorithm</option>
+                <option value="lines">Lines</option>
+                <option value="sentences">Sentences</option>
+                <option value="substrings">Substrings</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="number" name="length" value="" placeholder="Length">
+            </div>
+
+            <button class="btn btn-primary mb-2" type="submit" name="submit">Submit</button>
 
         </form>
     </div>

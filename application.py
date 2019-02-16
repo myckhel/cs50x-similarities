@@ -3,6 +3,7 @@ import re
 from flask import Flask, abort, redirect, render_template, request
 from html import escape
 from werkzeug.exceptions import default_exceptions, HTTPException
+#
 
 from helpers import lines, sentences, substrings
 
@@ -23,7 +24,6 @@ def after_request(response):
 def index():
     """Handle requests for / via GET (and POST)"""
     return render_template("index.html")
-
 
 @app.route("/compare", methods=["POST"])
 def compare():
