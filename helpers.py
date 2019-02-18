@@ -1,5 +1,6 @@
 from nltk.tokenize import sent_tokenize
 
+
 def lines(a, b):
     """Return lines in both a and b"""
 
@@ -35,6 +36,7 @@ def sentences(a, b):
             similarities.add(asen[i])
     # similarities to list and return
     return list(similarities)
+
 
 def substrings(a, b, n):
     """Return substrings of length n in both a and b"""
